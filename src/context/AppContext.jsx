@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AppContext = createContext();
 
-// Kamus Terjemahan (Bahasa Indonesia dibuat natural & profesional)
+// ===== KAMUS TERJEMAHAN (Bahasa Indonesia natural) =====
 const translations = {
   en: {
     nav: { work: 'Work', ai: 'AI', about: 'About', cv: 'CV', contact: 'Contact' },
@@ -19,7 +19,7 @@ const translations = {
     },
     work: {
       title: 'SELECTED WORK',
-      subtitle: 'A selection of creative and production work I have handled over the years.',
+      subtitle: "A selection of creative and production work I've worked on over the years.",
       viewAll: 'VIEW ALL WORK →'
     },
     ai: {
@@ -32,7 +32,7 @@ const translations = {
     about: {
       title1: 'CREATIVE BY NATURE.',
       title2: 'TECHNICAL BY EXPERIENCE.',
-      p1: 'My experience sits between creative production and technology. I have spent years working hands-on with photography, video, livestreaming, studio operations, digital content, technical support, and AI-powered projects.',
+      p1: "My experience sits between creative production and technology. I've spent years working hands-on with photography, video, livestreaming, studio operations, digital content, technical support, and AI-powered projects.",
       p2: 'From documenting large events to troubleshooting live production and experimenting with automation, I enjoy turning ideas into something people can actually see, use, or experience.',
       more: 'MORE ABOUT ME →'
     },
@@ -61,7 +61,7 @@ const translations = {
     hero: {
       eyebrow: 'KREATIF × TEKNOLOGI × AI',
       headline: 'SAYA MENCIPTAKAN KARYA YANG BISA DINIKMATI.',
-      subheadline: 'Dan merancang sistem agar semuanya berfungsi dengan sempurna.',
+      subheadline: 'Dan merancang sistem agar semuanya berjalan sempurna.',
       description: 'Saya bergerak di bidang konten visual, produksi kreatif, operasional studio, alur kerja teknis, dan proyek digital berbasis AI.',
       btnWork: 'LIHAT KARYA SAYA',
       btnAI: 'JELAJAHI PROYEK AI',
@@ -71,7 +71,7 @@ const translations = {
     },
     work: {
       title: 'KARYA PILIHAN',
-      subtitle: 'Seleksi dari pekerjaan kreatif dan produksi yang telah saya tangani selama bertahun-tahun.',
+      subtitle: 'Seleksi pekerjaan kreatif dan produksi yang telah saya tangani selama bertahun-tahun.',
       viewAll: 'LIHAT SEMUA KARYA →'
     },
     ai: {
@@ -111,13 +111,10 @@ const translations = {
 };
 
 export const AppProvider = ({ children }) => {
-  // Theme State (Default: dark)
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
-  
-  // Language State (Default: en)
   const [lang, setLang] = useState(() => localStorage.getItem('lang') || 'en');
 
-  // Apply theme to HTML tag
+  // Apply theme
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove('light', 'dark');
@@ -125,7 +122,6 @@ export const AppProvider = ({ children }) => {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  // Save language preference
   useEffect(() => {
     localStorage.setItem('lang', lang);
   }, [lang]);
@@ -133,7 +129,6 @@ export const AppProvider = ({ children }) => {
   const toggleTheme = () => setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   const toggleLang = () => setLang(prev => prev === 'en' ? 'id' : 'en');
 
-  // Helper function to get translation
   const t = (key) => {
     const keys = key.split('.');
     let value = translations[lang];
