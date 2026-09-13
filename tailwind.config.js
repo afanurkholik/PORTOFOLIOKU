@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class', // <-- TAMBAHKAN BARIS INI
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -12,17 +12,16 @@ export default {
         body: ['"Inter"', 'sans-serif'],
       },
       colors: {
-        // Kita buat warna ini adaptif. 
-        // Default adalah Dark. Kita akan override di komponen untuk Light mode.
-        background: '#0A0A0C', 
-        surface: '#121216',    
-        primary: '#F4F4F5',    
-        secondary: '#A1A1AA',  
-        accent: '#22D3EE',     
-        'accent-dim': 'rgba(34, 211, 238, 0.1)',
+        // PAKAI CSS VARIABLES - otomatis berubah saat toggle dark/light!
+        background: 'var(--color-background)',
+        surface: 'var(--color-surface)',
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        accent: 'var(--color-accent)',
+        'accent-dim': 'var(--color-accent-dim)',
       },
       backgroundImage: {
-        'grid-pattern': "linear-gradient(to right, #1f1f23 1px, transparent 1px), linear-gradient(to bottom, #1f1f23 1px, transparent 1px)",
+        'grid-pattern': "linear-gradient(to right, var(--color-grid) 1px, transparent 1px), linear-gradient(to bottom, var(--color-grid) 1px, transparent 1px)",
       }
     },
   },
