@@ -2,7 +2,6 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AppContext = createContext();
 
-// ===== KAMUS TERJEMAHAN (Bahasa Indonesia natural) =====
 const translations = {
   en: {
     nav: { work: 'Work', ai: 'AI', about: 'About', cv: 'CV', contact: 'Contact' },
@@ -53,6 +52,7 @@ const translations = {
     },
     footer: {
       tagline: 'CREATIVE × TECHNOLOGY × AI',
+      location: 'Salatiga, Central Java, Indonesia',
       copyright: '© 2026 Muhammad Wafa Nurkholik'
     }
   },
@@ -105,6 +105,7 @@ const translations = {
     },
     footer: {
       tagline: 'KREATIF × TEKNOLOGI × AI',
+      location: 'Salatiga, Jawa Tengah, Indonesia',
       copyright: '© 2026 Muhammad Wafa Nurkholik'
     }
   }
@@ -114,7 +115,6 @@ export const AppProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
   const [lang, setLang] = useState(() => localStorage.getItem('lang') || 'en');
 
-  // Apply theme
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove('light', 'dark');
