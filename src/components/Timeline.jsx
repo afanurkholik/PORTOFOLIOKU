@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { timeline } from '../data/content';
 import { useApp } from '../context/AppContext';
 
 export default function Timeline() {
-  const { t } = useApp();
+  const { t, data } = useApp();
 
   return (
     <section className="py-24 md:py-32">
@@ -19,7 +18,7 @@ export default function Timeline() {
         </motion.h2>
 
         <div className="relative border-l border-border ml-3 md:ml-0 space-y-12">
-          {timeline.map((item, index) => (
+          {data.timeline.items.map((item, index) => (
             <motion.div 
               key={index}
               initial={{ opacity: 0, x: -20 }}
