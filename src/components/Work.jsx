@@ -1,11 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { projects } from '../data/content';
 import { ArrowUpRight } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
 export default function Work() {
-  const { t } = useApp();
+  const { t, data } = useApp();
 
   return (
     <section id="work" className="py-24 md:py-32 relative">
@@ -21,7 +20,7 @@ export default function Work() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {data.work.projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
