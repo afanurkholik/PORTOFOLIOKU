@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class', // <-- TAMBAHKAN BARIS INI
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -11,11 +12,13 @@ export default {
         body: ['"Inter"', 'sans-serif'],
       },
       colors: {
-        background: '#0A0A0C', // Near-black charcoal
-        surface: '#121216',    // Slightly lighter for cards
-        primary: '#F4F4F5',    // Off-white
-        secondary: '#A1A1AA',  // Muted gray
-        accent: '#22D3EE',     // Electric cyan
+        // Kita buat warna ini adaptif. 
+        // Default adalah Dark. Kita akan override di komponen untuk Light mode.
+        background: '#0A0A0C', 
+        surface: '#121216',    
+        primary: '#F4F4F5',    
+        secondary: '#A1A1AA',  
+        accent: '#22D3EE',     
         'accent-dim': 'rgba(34, 211, 238, 0.1)',
       },
       backgroundImage: {
