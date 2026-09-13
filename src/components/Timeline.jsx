@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { timeline } from '../data/content';
+import { useApp } from '../context/AppContext';
 
 export default function Timeline() {
+  const { t } = useApp();
+
   return (
     <section className="py-24 md:py-32">
       <div className="max-w-4xl mx-auto px-6">
@@ -12,10 +15,10 @@ export default function Timeline() {
           viewport={{ once: true }}
           className="font-display text-3xl md:text-4xl font-bold mb-12"
         >
-          EXPERIENCE SNAPSHOT
+          {t('timeline.title')}
         </motion.h2>
 
-        <div className="relative border-l border-white/10 ml-3 md:ml-0 space-y-12">
+        <div className="relative border-l border-border ml-3 md:ml-0 space-y-12">
           {timeline.map((item, index) => (
             <motion.div 
               key={index}
