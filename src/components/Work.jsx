@@ -2,8 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { projects } from '../data/content';
 import { ArrowUpRight } from 'lucide-react';
+import { useApp } from '../context/AppContext';
 
 export default function Work() {
+  const { t } = useApp();
+
   return (
     <section id="work" className="py-24 md:py-32 relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -13,8 +16,8 @@ export default function Work() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="font-display text-4xl md:text-6xl font-bold mb-4">SELECTED WORK</h2>
-          <p className="text-secondary text-lg max-w-2xl">A selection of creative and production work I've worked on over the years.</p>
+          <h2 className="font-display text-4xl md:text-6xl font-bold mb-4">{t('work.title')}</h2>
+          <p className="text-secondary text-lg max-w-2xl">{t('work.subtitle')}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -25,11 +28,10 @@ export default function Work() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`group relative bg-surface border border-white/5 rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-500 ${index === 0 ? 'md:col-span-2' : ''}`}
+              className={`group relative bg-surface border border-border rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-500 ${index === 0 ? 'md:col-span-2' : ''}`}
             >
               <div className={`relative ${index === 0 ? 'aspect-[21/9]' : 'aspect-[16/9]'} overflow-hidden bg-background`}>
-                {/* Image Placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center bg-neutral-900 group-hover:scale-105 transition-transform duration-700">
+                <div className="absolute inset-0 flex items-center justify-center bg-surface group-hover:scale-105 transition-transform duration-700">
                   <span className="text-secondary/30 font-mono text-sm">[ PROJECT IMAGE: {project.title} ]</span>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80" />
@@ -56,7 +58,7 @@ export default function Work() {
 
         <div className="mt-16 text-center">
           <a href="#" className="inline-flex items-center gap-2 text-secondary hover:text-accent transition-colors font-mono text-sm tracking-wider">
-            VIEW ALL WORK →
+            {t('work.viewAll')}
           </a>
         </div>
       </div>
