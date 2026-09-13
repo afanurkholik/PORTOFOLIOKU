@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <h4 className="font-display font-bold text-lg tracking-tight">{personal.name.toUpperCase()}</h4>
           <p className="text-accent font-mono text-xs tracking-widest mt-1">{t('footer.tagline')}</p>
-          <p className="text-secondary text-sm mt-2">{personal.location}</p>
+          <p className="text-secondary text-sm mt-2">{t('footer.location')}</p>
         </div>
         
         <div className="flex gap-6">
