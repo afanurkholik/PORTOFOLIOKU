@@ -1,11 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { aiProjects } from '../data/content';
 import { Cpu, ArrowDown } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
 export default function AI() {
-  const { t } = useApp();
+  const { t, data } = useApp();
 
   return (
     <section id="ai" className="py-24 md:py-32 bg-surface relative overflow-hidden">
@@ -26,7 +25,7 @@ export default function AI() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {aiProjects.map((project, index) => (
+          {data.ai.projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
