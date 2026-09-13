@@ -2,7 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Cinematic Noise Overlay */
+/* ===== CSS VARIABLES UNTUK DARK/LIGHT MODE ===== */
+:root {
+  /* LIGHT MODE (default) */
+  --color-background: #ffffff;
+  --color-surface: #f4f4f5;
+  --color-primary: #0a0a0c;
+  --color-secondary: #52525b;
+  --color-accent: #0891b2;
+  --color-accent-dim: rgba(8, 145, 178, 0.1);
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-grid: #e4e4e7;
+}
+
+.dark {
+  /* DARK MODE */
+  --color-background: #0A0A0C;
+  --color-surface: #121216;
+  --color-primary: #F4F4F5;
+  --color-secondary: #A1A1AA;
+  --color-accent: #22D3EE;
+  --color-accent-dim: rgba(34, 211, 238, 0.1);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-grid: #1f1f23;
+}
+
+/* Noise Overlay */
 .noise-overlay {
   position: fixed;
   top: 0;
@@ -16,22 +41,16 @@
 }
 
 /* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #0A0A0C;
-}
-::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #22D3EE;
-}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-background); }
+::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
 
-/* Smooth reveal base */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
