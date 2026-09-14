@@ -27,50 +27,48 @@ const allData = {
       subtitle: "A selection of creative and production work I've worked on over the years.",
       viewAll: 'VIEW ALL WORK →',
       projects: [
-        {
-          id: 'p1',
-          title: 'Graduation Photography',
-          category: 'Photography · Event Coverage',
-          description: 'Documented annual graduation ceremonies for more than 1,000 graduates, covering large-scale events through photography.',
-          metadata: ['4 YEARS', '1,000+ GRADUATES', 'PHOTOGRAPHY', 'EVENT COVERAGE'],
-          slug: 'graduation-photography'
-        },
-        {
-          id: 'p2',
-          title: 'School Content Production',
-          category: 'Photo · Video · Design · Social Media',
-          description: 'Produced visual content for a school environment, including posters, banners, announcements, social media content, photography, and video. Supported an environment where annual applicants consistently exceeded the ~200 student enrollment target.',
-          metadata: ['4 YEARS', 'PHOTO · VIDEO · DESIGN', 'SOCIAL MEDIA'],
-          slug: 'school-content',
-          image: '/assets/images/projects/school-content.jpg'
-        },
-        {
-          id: 'p3',
-          title: 'Event Livestreaming',
-          category: 'Live Production · OBS · YouTube',
-          description: 'Managed livestreaming workflows for institutional events using OBS and YouTube, including setup, monitoring, and troubleshooting.',
-          metadata: ['3 YEARS', 'OBS', 'YOUTUBE', 'LIVE PRODUCTION'],
-          slug: 'livestreaming'
-        },
-        {
-          id: 'p4',
-          title: 'Institutional Video Production',
-          category: 'Video · Shooting · Editing',
-          description: 'Worked on shooting and editing institutional and school profile videos.',
-          metadata: ['VIDEO', 'SHOOTING', 'EDITING', 'PROFILE VIDEO'],
-          slug: 'video-production',
-          videoUrl: 'https://www.youtube.com/watch?v=RfZ9-YArK2Y'
-        },
-        {
-          id: 'p5',
-          title: 'Studio & Podcast Production',
-          category: 'Studio · Camera · Audio · MC',
-          description: 'Worked with podcast and studio production setups, including cameras, lighting, wireless microphones, recording, and MC/narration.',
-          metadata: ['STUDIO', 'CAMERA', 'AUDIO', 'MC / NARRATION'],
-          slug: 'podcast-production',
-          image: '/assets/images/projects/podcast-production.jpg'
-        }
-      ]
+  {
+    id: 'p1',
+    title: 'Graduation Photography',
+    category: 'Photography · Event Coverage',
+    description: 'Documented annual graduation ceremonies for more than 1,000 graduates, covering large-scale events through photography.',
+    metadata: ['4 YEARS', '1,000+ GRADUATES', 'PHOTOGRAPHY', 'EVENT COVERAGE'],
+    slug: 'graduation-photography'
+  },
+  {
+    id: 'p2',
+    title: 'School Content Production',
+    category: 'Photo · Video · Design · Social Media',
+    description: 'Produced visual content for a school environment, including posters, banners, announcements, social media content, photography, and video. Supported an environment where annual applicants consistently exceeded the ~200 student enrollment target.',
+    metadata: ['4 YEARS', 'PHOTO · VIDEO · DESIGN', 'SOCIAL MEDIA'],
+    slug: 'school-content'
+  },
+  {
+    id: 'p3',
+    title: 'School Website Development',
+    category: 'WordPress · Web Design · CMS',
+    description: 'Built and managed a school profile website using WordPress, including design, configuration, and content maintenance.',
+    metadata: ['WORDPRESS', 'WEB DESIGN', 'CMS', 'CONTENT MANAGEMENT'],
+    slug: 'school-website'
+  },
+  {
+    id: 'p4',
+    title: 'Institutional Video Production',
+    category: 'Video · Shooting · Editing',
+    description: 'Worked on shooting and editing institutional and school profile videos.',
+    metadata: ['VIDEO', 'SHOOTING', 'EDITING', 'PROFILE VIDEO'],
+    slug: 'video-production',
+    videoUrl: 'https://www.youtube.com/watch?v=RfZ9-YArK2Y'
+  },
+  {
+    id: 'p5',
+    title: 'Studio & Podcast Production',
+    category: 'Studio · Camera · Audio · Livestream',
+    description: 'Worked with podcast and studio production setups, including cameras, lighting, wireless microphones, recording, and MC/narration. Also managed livestreaming workflows for institutional events using OBS and YouTube.',
+    metadata: ['STUDIO', 'CAMERA', 'AUDIO', 'LIVESTREAM'],
+    slug: 'podcast-production'
+  }
+]
     },
     
     // AI Section
@@ -203,47 +201,48 @@ const allData = {
       subtitle: 'Seleksi pekerjaan kreatif dan produksi yang telah saya tangani selama bertahun-tahun.',
       viewAll: 'LIHAT SEMUA KARYA →',
       projects: [
-        {
-          id: 'p1',
-          title: 'Dokumentasi Wisuda',
-          category: 'Fotografi · Liputan Acara',
-          description: 'Mendokumentasikan upacara wisuda tahunan untuk lebih dari 1.000 lulusan, mencakup acara berskala besar melalui fotografi.',
-          metadata: ['4 TAHUN', '1.000+ LULUSAN', 'FOTOGRAFI', 'LIPUTAN ACARA'],
-          slug: 'graduation-photography'
-        },
-        {
-          id: 'p2',
-          title: 'Produksi Konten Sekolah',
-          category: 'Foto · Video · Desain · Media Sosial',
-          description: 'Memproduksi konten visual untuk lingkungan sekolah, termasuk poster, spanduk, pengumuman, konten media sosial, fotografi, dan video. Mendukung lingkungan di mana pelamar tahunan secara konsisten melebihi target penerimaan siswa ~200.',
-          metadata: ['4 TAHUN', 'FOTO · VIDEO · DESAIN', 'MEDIA SOSIAL'],
-          slug: 'school-content'
-        },
-        {
-          id: 'p3',
-          title: 'Livestreaming Acara',
-          category: 'Produksi Langsung · OBS · YouTube',
-          description: 'Mengelola alur kerja livestreaming untuk acara institusi menggunakan OBS dan YouTube, termasuk penyiapan, pemantauan, dan troubleshooting.',
-          metadata: ['3 TAHUN', 'OBS', 'YOUTUBE', 'PRODUKSI LANGSUNG'],
-          slug: 'livestreaming'
-        },
-        {
-          id: 'p4',
-          title: 'Produksi Video Institusi',
-          category: 'Video · Shooting · Editing',
-          description: 'Bekerja pada shooting dan editing video profil institusi dan sekolah.',
-          metadata: ['VIDEO', 'SHOOTING', 'EDITING', 'VIDEO PROFIL'],
-          slug: 'video-production'
-        },
-        {
-          id: 'p5',
-          title: 'Produksi Studio & Podcast',
-          category: 'Studio · Kamera · Audio · MC',
-          description: 'Bekerja dengan setup produksi podcast dan studio, termasuk kamera, pencahayaan, mikrofon nirkabel, rekaman, dan MC/narasi.',
-          metadata: ['STUDIO', 'KAMERA', 'AUDIO', 'MC / NARASI'],
-          slug: 'podcast-production'
-        }
-      ]
+  {
+    id: 'p1',
+    title: 'Dokumentasi Wisuda',
+    category: 'Fotografi · Liputan Acara',
+    description: 'Mendokumentasikan upacara wisuda tahunan untuk lebih dari 1.000 lulusan, mencakup acara berskala besar melalui fotografi.',
+    metadata: ['4 TAHUN', '1.000+ LULUSAN', 'FOTOGRAFI', 'LIPUTAN ACARA'],
+    slug: 'graduation-photography'
+  },
+  {
+    id: 'p2',
+    title: 'Produksi Konten Sekolah',
+    category: 'Foto · Video · Desain · Media Sosial',
+    description: 'Memproduksi konten visual untuk lingkungan sekolah, termasuk poster, spanduk, pengumuman, konten media sosial, fotografi, dan video. Mendukung lingkungan di mana pelamar tahunan secara konsisten melebihi target penerimaan siswa ~200.',
+    metadata: ['4 TAHUN', 'FOTO · VIDEO · DESAIN', 'MEDIA SOSIAL'],
+    slug: 'school-content'
+  },
+  {
+    id: 'p3',
+    title: 'Pengembangan Website Sekolah',
+    category: 'WordPress · Desain Web · CMS',
+    description: 'Membangun dan mengelola website profil sekolah menggunakan WordPress, mencakup desain, konfigurasi, dan pemeliharaan konten.',
+    metadata: ['WORDPRESS', 'DESAIN WEB', 'CMS', 'MANAJEMEN KONTEN'],
+    slug: 'school-website'
+  },
+  {
+    id: 'p4',
+    title: 'Produksi Video Institusi',
+    category: 'Video · Shooting · Editing',
+    description: 'Bekerja pada shooting dan editing video profil institusi dan sekolah.',
+    metadata: ['VIDEO', 'SHOOTING', 'EDITING', 'VIDEO PROFIL'],
+    slug: 'video-production',
+    videoUrl: 'https://www.youtube.com/watch?v=RfZ9-YArK2Y'
+  },
+  {
+    id: 'p5',
+    title: 'Produksi Studio & Podcast',
+    category: 'Studio · Kamera · Audio · Livestream',
+    description: 'Bekerja dengan setup produksi podcast dan studio, termasuk kamera, pencahayaan, mikrofon nirkabel, rekaman, dan MC/narasi. Juga mengelola alur kerja livestreaming untuk acara institusi menggunakan OBS dan YouTube.',
+    metadata: ['STUDIO', 'KAMERA', 'AUDIO', 'LIVESTREAM'],
+    slug: 'podcast-production'
+  }
+]
     },
     
     // AI Section
