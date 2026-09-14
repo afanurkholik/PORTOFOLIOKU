@@ -83,20 +83,23 @@ const allData = {
       projects: [
         {
           title: 'AI Teacher Assistant',
-          description: 'An AI-assisted concept designed to help teachers prepare before teaching and think through classroom preparation.'
+          description: 'An AI-assisted concept designed to help teachers prepare before teaching and think through classroom preparation.',
+          image: '/assets/images/ai/teacher-assistant.jpg'
         },
         {
           title: 'AI Affiliate System',
-          description: 'An AI-powered digital product experiment exploring how AI can support affiliate marketing and content workflows.'
+          description: 'An AI-powered digital product experiment exploring how AI can support affiliate marketing and content workflows.',
+          image: '/assets/images/ai/affiliate-system.jpg'
         },
         {
           title: 'AI Assessment',
-          description: 'An interactive AI-based assessment concept designed to turn user responses into personalized results and recommendations.'
+          description: 'An interactive AI-based assessment concept designed to turn user responses into personalized results and recommendations.',
+          image: '/assets/images/ai/assessment.jpg
         },
         {
           title: 'Telegram → n8n Content Workflow',
           description: 'An automation workflow that allows content ideas to be generated through a Telegram-based interaction.',
-          isWorkflow: true
+          image: '/assets/images/ai/workflow.jpg'
         }
       ]
     },
@@ -260,20 +263,23 @@ const allData = {
       projects: [
         {
           title: 'Asisten Guru AI',
-          description: 'Konsep berbasis AI yang dirancang untuk membantu guru mempersiapkan diri sebelum mengajar dan memikirkan persiapan kelas.'
+          description: 'Konsep berbasis AI yang dirancang untuk membantu guru mempersiapkan diri sebelum mengajar dan memikirkan persiapan kelas.',
+          image: '/assets/images/ai/teacher-assistant.jpg'
         },
         {
           title: 'Sistem Afiliasi AI',
-          description: 'Eksperimen produk digital berbasis AI yang mengeksplorasi bagaimana AI dapat mendukung pemasaran afiliasi dan alur kerja konten.'
+          description: 'Eksperimen produk digital berbasis AI yang mengeksplorasi bagaimana AI dapat mendukung pemasaran afiliasi dan alur kerja konten.',
+          image: '/assets/images/ai/affiliate-system.jpg'
         },
         {
           title: 'Asesmen AI',
-          description: 'Konsep asesmen interaktif berbasis AI yang dirancang untuk mengubah respons pengguna menjadi hasil dan rekomendasi yang dipersonalisasi.'
+          description: 'Konsep asesmen interaktif berbasis AI yang dirancang untuk mengubah respons pengguna menjadi hasil dan rekomendasi yang dipersonalisasi.',
+          image: '/assets/images/ai/assessment.jpg'
         },
         {
           title: 'Alur Kerja Konten Telegram → n8n',
           description: 'Alur kerja otomatisasi yang memungkinkan ide konten dihasilkan melalui interaksi berbasis Telegram.',
-          isWorkflow: true
+          image: '/assets/images/ai/workflow.jpg'
         }
       ]
     },
