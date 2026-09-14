@@ -57,7 +57,7 @@ const allData = {
           category: 'Video · Shooting · Editing',
           description: 'Worked on shooting and editing institutional and school profile videos.',
           metadata: ['VIDEO', 'SHOOTING', 'EDITING', 'PROFILE VIDEO'],
-          slug: 'video-production'
+          slug: 'video-production',
           videoUrl: 'https://youtu.be/RfZ9-YArK2Y?si=axnsyHP804vgUhdr'
         },
         {
