@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MapPin, MonitorCog, Cpu, Clapperboard } from 'lucide-react';
+import { ArrowRight, MapPin, Monitor, Cpu, Clapperboard } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 
 export default function Hero() {
@@ -8,7 +8,7 @@ export default function Hero() {
 
   const topSkills = [
     { icon: Clapperboard, label: 'Content & Media Production' },
-    { icon: MonitorCog, label: 'Digital & Technical Operations' },
+    { icon: Monitor, label: 'Digital & Technical Operations' },
     { icon: Cpu, label: 'AI & Automation' },
   ];
 
