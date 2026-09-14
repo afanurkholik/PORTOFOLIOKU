@@ -66,7 +66,8 @@ const allData = {
           category: 'Studio · Camera · Audio · MC',
           description: 'Worked with podcast and studio production setups, including cameras, lighting, wireless microphones, recording, and MC/narration.',
           metadata: ['STUDIO', 'CAMERA', 'AUDIO', 'MC / NARRATION'],
-          slug: 'podcast-production'
+          slug: 'podcast-production',
+          image: '/assets/images/projects/podcast-production.jpg'
         }
       ]
     },
