@@ -27,14 +27,7 @@ const allData = {
       subtitle: "A selection of creative and production work I've worked on over the years.",
       viewAll: 'VIEW ALL WORK →',
       projects: [
-  {
-    id: 'p1',
-    title: 'Graduation Photography',
-    category: 'Photography · Event Coverage',
-    description: 'Documented annual graduation ceremonies for more than 1,000 graduates, covering large-scale events through photography.',
-    metadata: ['4 YEARS', '1,000+ GRADUATES', 'PHOTOGRAPHY', 'EVENT COVERAGE'],
-    slug: 'graduation-photography'
-  },
+ 
   {
     id: 'p2',
     title: 'School Content Production',
@@ -207,14 +200,7 @@ const allData = {
       subtitle: 'Seleksi pekerjaan kreatif dan produksi yang telah saya tangani selama bertahun-tahun.',
       viewAll: 'LIHAT SEMUA KARYA →',
       projects: [
-  {
-    id: 'p1',
-    title: 'Dokumentasi Wisuda',
-    category: 'Fotografi · Liputan Acara',
-    description: 'Mendokumentasikan upacara wisuda tahunan untuk lebih dari 1.000 lulusan, mencakup acara berskala besar melalui fotografi.',
-    metadata: ['4 TAHUN', '1.000+ LULUSAN', 'FOTOGRAFI', 'LIPUTAN ACARA'],
-    slug: 'graduation-photography'
-  },
+ 
   {
     id: 'p2',
     title: 'Produksi Konten Sekolah',
