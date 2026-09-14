@@ -32,39 +32,54 @@ export default function AI() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-8 rounded-2xl border border-border bg-background/50 hover:border-accent/30 transition-all group"
+              className="group relative bg-background border border-border rounded-2xl overflow-hidden hover:border-accent/30 transition-all flex flex-col"
             >
-              {project.isWorkflow ? (
-                <div className="mb-6">
-                  <h3 className="font-display text-xl font-bold mb-4 flex items-center gap-2">
-                    <Cpu size={20} className="text-accent" /> {project.title}
-                  </h3>
-                  <p className="text-secondary mb-6">{project.description}</p>
-                  
-                  <div className="flex flex-col items-center gap-2 font-mono text-sm text-secondary bg-surface p-6 rounded-xl border border-border">
-                    <div className="flex items-center gap-3 w-full justify-center">
-                      <span className="px-3 py-1.5 bg-blue-500/20 text-blue-400 rounded border border-blue-500/30">TELEGRAM</span>
-                      <ArrowDown size={16} className="text-accent animate-bounce" />
+              {/* Image Section */}
+              <div className="relative aspect-[16/9] bg-surface overflow-hidden">
+                {project.image ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-surface/50">
+                    <Cpu size={48} className="text-secondary/20" />
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-40" />
+              </div>
+
+              {/* Content Section */}
+              <div className="p-6 md:p-8 flex-grow flex flex-col">
+                <h3 className="font-display text-xl md:text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-secondary leading-relaxed mb-6 flex-grow">
+                  {project.description}
+                </p>
+                
+                {/* Workflow Diagram (Only for the specific project) */}
+                {project.isWorkflow && (
+                  <div className="flex flex-col items-center gap-3 font-mono text-xs md:text-sm text-secondary bg-surface/50 p-4 rounded-xl border border-border mt-auto">
+                    <div className="flex items-center gap-2 w-full justify-center">
+                      <span className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded border border-blue-500/30">TELEGRAM</span>
+                      <ArrowDown size={14} className="text-accent" />
                     </div>
-                    <div className="flex items-center gap-3 w-full justify-center">
-                      <span className="px-3 py-1.5 bg-accent/20 text-accent rounded border border-accent/30">AI PROCESSING</span>
-                      <ArrowDown size={16} className="text-accent animate-bounce" style={{ animationDelay: '0.2s' }} />
+                    <div className="flex items-center gap-2 w-full justify-center">
+                      <span className="px-2 py-1 bg-accent/20 text-accent rounded border border-accent/30">AI</span>
+                      <ArrowDown size={14} className="text-accent" />
                     </div>
-                    <div className="flex items-center gap-3 w-full justify-center">
-                      <span className="px-3 py-1.5 bg-green-500/20 text-green-400 rounded border border-green-500/30">CONTENT IDEAS</span>
-                      <ArrowDown size={16} className="text-accent animate-bounce" style={{ animationDelay: '0.4s' }} />
+                    <div className="flex items-center gap-2 w-full justify-center">
+                      <span className="px-2 py-1 bg-green-500/20 text-green-400 rounded border border-green-500/30">IDEAS</span>
+                      <ArrowDown size={14} className="text-accent" />
                     </div>
-                    <div className="flex items-center gap-3 w-full justify-center">
-                      <span className="px-3 py-1.5 bg-blue-500/20 text-blue-400 rounded border border-blue-500/30">TELEGRAM</span>
+                    <div className="flex items-center gap-2 w-full justify-center">
+                      <span className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded border border-blue-500/30">TELEGRAM</span>
                     </div>
                   </div>
-                </div>
-              ) : (
-                <>
-                  <h3 className="font-display text-xl font-bold mb-3 group-hover:text-accent transition-colors">{project.title}</h3>
-                  <p className="text-secondary leading-relaxed">{project.description}</p>
-                </>
-              )}
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
