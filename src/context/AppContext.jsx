@@ -49,7 +49,8 @@ const allData = {
     category: 'WordPress · Web Design · CMS',
     description: 'Built and managed a school profile website using WordPress, including design, configuration, and content maintenance.',
     metadata: ['WORDPRESS', 'WEB DESIGN', 'CMS', 'CONTENT MANAGEMENT'],
-    slug: 'school-website'
+    slug: 'school-website',
+    image: '/assets/images/projects/school-website.jpg'
   },
   {
     id: 'p4',
@@ -223,7 +224,8 @@ const allData = {
     category: 'WordPress · Desain Web · CMS',
     description: 'Membangun dan mengelola website profil sekolah menggunakan WordPress, mencakup desain, konfigurasi, dan pemeliharaan konten.',
     metadata: ['WORDPRESS', 'DESAIN WEB', 'CMS', 'MANAJEMEN KONTEN'],
-    slug: 'school-website'
+    slug: 'school-website',
+    image: '/assets/images/projects/school-website.jpg'
   },
   {
     id: 'p4',
