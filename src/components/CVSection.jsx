@@ -23,7 +23,7 @@ export default function CVSection() {
           </p>
           
           <a 
-            href="/assets/cv/cv.pdf" 
+            href="/assets/cv/Muhammad_Wafa_Nurkholik.pdf" 
             download 
             className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-background font-semibold rounded-full hover:bg-accent transition-all"
           >
