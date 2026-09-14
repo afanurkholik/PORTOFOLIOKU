@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, PlayCircle } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import VideoModal from './VideoModal';
 
@@ -32,24 +32,27 @@ export default function Work() {
               className={`group relative bg-surface border border-border rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-500 ${index === 0 ? 'md:col-span-2' : ''}`}
             >
               <div className={`relative ${index === 0 ? 'aspect-[21/9]' : 'aspect-[16/9]'} overflow-hidden bg-background`}>
-                {/* Thumbnail dengan Play Button untuk Video */}
-                <div className="absolute inset-0 flex items-center justify-center bg-surface group-hover:scale-105 transition-transform duration-700">
+                {/* Thumbnail Area */}
+                <div className="absolute inset-0 flex items-center justify-center bg-surface">
                   {project.videoUrl ? (
-                    <div className="relative w-full h-full flex items-center justify-center">
-                      <button 
-                        onClick={() => setSelectedVideo(project.videoUrl)}
-                        className="w-20 h-20 rounded-full bg-accent/90 hover:bg-accent flex items-center justify-center transition-all hover:scale-110 group/btn shadow-2xl"
-                        aria-label="Play video"
-                      >
-                        <PlayCircle size={40} className="text-background ml-1" />
-                      </button>
-                      <span className="absolute bottom-4 left-4 text-secondary/30 font-mono text-xs">[ VIDEO PROJECT ]</span>
-                    </div>
+                    <button 
+                      onClick={() => setSelectedVideo(project.videoUrl)}
+                      className="flex flex-col items-center gap-3 cursor-pointer group/btn"
+                      style={{ background: 'none', border: 'none' }}
+                    >
+                      {/* Play Button - Simple & Clear */}
+                      <div className="w-24 h-24 rounded-full bg-[#22D3EE] flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 5V19L19 12L8 5Z" fill="#0A0A0C"/>
+                        </svg>
+                      </div>
+                      <span className="text-[#22D3EE] font-mono text-sm font-semibold">WATCH VIDEO</span>
+                    </button>
                   ) : (
                     <span className="text-secondary/30 font-mono text-sm">[ PROJECT IMAGE: {project.title} ]</span>
                   )}
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80 pointer-events-none" />
               </div>
               
               <div className="p-8">
