@@ -41,7 +41,8 @@ const allData = {
     category: 'Photo · Video · Design · Social Media',
     description: 'Produced visual content for a school environment, including posters, banners, announcements, social media content, photography, and video. Supported an environment where annual applicants consistently exceeded the ~200 student enrollment target.',
     metadata: ['4 YEARS', 'PHOTO · VIDEO · DESIGN', 'SOCIAL MEDIA'],
-    slug: 'school-content'
+    slug: 'school-content',
+    image: '/assets/images/projects/school-content.jpg'
   },
   {
     id: 'p3',
@@ -67,7 +68,8 @@ const allData = {
     category: 'Studio · Camera · Audio · Livestream',
     description: 'Worked with podcast and studio production setups, including cameras, lighting, wireless microphones, recording, and MC/narration. Also managed livestreaming workflows for institutional events using OBS and YouTube.',
     metadata: ['STUDIO', 'CAMERA', 'AUDIO', 'LIVESTREAM'],
-    slug: 'podcast-production'
+    slug: 'podcast-production',
+    image: '/assets/images/projects/podcast-production.jpg'
   }
 ]
     },
@@ -216,7 +218,8 @@ const allData = {
     category: 'Foto · Video · Desain · Media Sosial',
     description: 'Memproduksi konten visual untuk lingkungan sekolah, termasuk poster, spanduk, pengumuman, konten media sosial, fotografi, dan video. Mendukung lingkungan di mana pelamar tahunan secara konsisten melebihi target penerimaan siswa ~200.',
     metadata: ['4 TAHUN', 'FOTO · VIDEO · DESAIN', 'MEDIA SOSIAL'],
-    slug: 'school-content'
+    slug: 'school-content',
+    image: '/assets/images/projects/school-content.jpg'
   },
   {
     id: 'p3',
@@ -242,7 +245,8 @@ const allData = {
     category: 'Studio · Kamera · Audio · Livestream',
     description: 'Bekerja dengan setup produksi podcast dan studio, termasuk kamera, pencahayaan, mikrofon nirkabel, rekaman, dan MC/narasi. Juga mengelola alur kerja livestreaming untuk acara institusi menggunakan OBS dan YouTube.',
     metadata: ['STUDIO', 'KAMERA', 'AUDIO', 'LIVESTREAM'],
-    slug: 'podcast-production'
+    slug: 'podcast-production',
+    image: '/assets/images/projects/podcast-production.jpg'
   }
 ]
     },
