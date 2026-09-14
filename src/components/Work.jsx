@@ -31,7 +31,8 @@ export default function Work() {
         <div className="grid md:grid-cols-2 gap-8">
           {data.work.projects.map((project, index) => {
             const videoId = getVideoId(project.videoUrl);
-            const thumbnailUrl = videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : null;
+            const youtubeThumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : null;
+            const displayImage = project.image || youtubeThumbnail;
 
             return (
               <motion.div
@@ -45,27 +46,31 @@ export default function Work() {
                 <div className={`relative ${index === 0 ? 'aspect-[21/9]' : 'aspect-[16/9]'} overflow-hidden bg-background`}>
                   {/* Thumbnail Area */}
                   <div className="absolute inset-0">
-                    {thumbnailUrl ? (
+                    {displayImage ? (
                       <>
-                        {/* YouTube Thumbnail */}
+                        {/* Gambar (dari upload atau YouTube thumbnail) */}
                         <img 
-                          src={thumbnailUrl}
+                          src={displayImage}
                           alt={project.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
-                        {/* Play Button Overlay */}
-                        <button 
-                          onClick={() => setSelectedVideo(project.videoUrl)}
-                          className="absolute inset-0 flex flex-col items-center justify-center gap-3 cursor-pointer bg-black/30 hover:bg-black/50 transition-colors"
-                          style={{ background: 'rgba(0,0,0,0.3)' }}
-                        >
-                          <div className="w-24 h-24 rounded-full bg-[#22D3EE] flex items-center justify-center hover:scale-110 transition-transform shadow-2xl">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M8 5V19L19 12L8 5Z" fill="#0A0A0C"/>
-                            </svg>
-                          </div>
-                          <span className="text-[#22D3EE] font-mono text-sm font-semibold bg-black/50 px-4 py-2 rounded-full">WATCH VIDEO</span>
-                        </button>
+                        {/* Overlay gelap */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent opacity-90" />
+                        
+                        {/* Play Button kalau ada video */}
+                        {project.videoUrl && (
+                          <button 
+                            onClick={() => setSelectedVideo(project.videoUrl)}
+                            className="absolute inset-0 flex flex-col items-center justify-center gap-3 cursor-pointer hover:bg-black/10 transition-colors"
+                          >
+                            <div className="w-20 h-20 rounded-full bg-[#22D3EE] flex items-center justify-center hover:scale-110 transition-transform shadow-2xl">
+                              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5V19L19 12L8 5Z" fill="#0A0A0C"/>
+                              </svg>
+                            </div>
+                            <span className="text-[#22D3EE] font-mono text-xs font-semibold bg-black/60 px-3 py-1.5 rounded-full">WATCH VIDEO</span>
+                          </button>
+                        )}
                       </>
                     ) : (
                       <div className="w-full h-full flex items-center justify-center bg-surface">
@@ -73,7 +78,6 @@ export default function Work() {
                       </div>
                     )}
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80 pointer-events-none" />
                 </div>
                 
                 <div className="p-8">
