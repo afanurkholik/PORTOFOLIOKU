@@ -94,7 +94,7 @@ const allData = {
         {
           title: 'AI Assessment',
           description: 'An interactive AI-based assessment concept designed to turn user responses into personalized results and recommendations.',
-          image: '/assets/images/ai/assessment.jpg
+          image: '/assets/images/ai/assessment.jpg'
         },
         {
           title: 'Telegram → n8n Content Workflow',
