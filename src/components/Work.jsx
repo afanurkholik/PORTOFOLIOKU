@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, PlayCircle } from 'lucide-react';
 import { useApp } from '../context/AppContext';
+import VideoModal from './VideoModal';
 
 export default function Work() {
   const { t, data } = useApp();
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   return (
     <section id="work" className="py-24 md:py-32 relative">
@@ -30,8 +32,23 @@ export default function Work() {
               className={`group relative bg-surface border border-border rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-500 ${index === 0 ? 'md:col-span-2' : ''}`}
             >
               <div className={`relative ${index === 0 ? 'aspect-[21/9]' : 'aspect-[16/9]'} overflow-hidden bg-background`}>
+                {/* Thumbnail Placeholder */}
                 <div className="absolute inset-0 flex items-center justify-center bg-surface group-hover:scale-105 transition-transform duration-700">
-                  <span className="text-secondary/30 font-mono text-sm">[ PROJECT IMAGE: {project.title} ]</span>
+                  {project.videoUrl ? (
+                    <div className="relative">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <button 
+                          onClick={() => setSelectedVideo(project.videoUrl)}
+                          className="w-20 h-20 rounded-full bg-accent/90 hover:bg-accent flex items-center justify-center transition-all hover:scale-110 group/btn"
+                        >
+                          <PlayCircle size={40} className="text-background ml-1" />
+                        </button>
+                      </div>
+                      <span className="text-secondary/30 font-mono text-sm">[ VIDEO: {project.title} ]</span>
+                    </div>
+                  ) : (
+                    <span className="text-secondary/30 font-mono text-sm">[ PROJECT IMAGE: {project.title} ]</span>
+                  )}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80" />
               </div>
@@ -61,6 +78,13 @@ export default function Work() {
           </a>
         </div>
       </div>
+
+      {/* Video Modal */}
+      <VideoModal 
+        isOpen={!!selectedVideo}
+        onClose={() => setSelectedVideo(null)}
+        videoUrl={selectedVideo}
+      />
     </section>
   );
 }
