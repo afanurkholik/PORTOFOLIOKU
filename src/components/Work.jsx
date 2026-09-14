@@ -32,19 +32,18 @@ export default function Work() {
               className={`group relative bg-surface border border-border rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-500 ${index === 0 ? 'md:col-span-2' : ''}`}
             >
               <div className={`relative ${index === 0 ? 'aspect-[21/9]' : 'aspect-[16/9]'} overflow-hidden bg-background`}>
-                {/* Thumbnail Placeholder */}
+                {/* Thumbnail dengan Play Button untuk Video */}
                 <div className="absolute inset-0 flex items-center justify-center bg-surface group-hover:scale-105 transition-transform duration-700">
                   {project.videoUrl ? (
-                    <div className="relative">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <button 
-                          onClick={() => setSelectedVideo(project.videoUrl)}
-                          className="w-20 h-20 rounded-full bg-accent/90 hover:bg-accent flex items-center justify-center transition-all hover:scale-110 group/btn"
-                        >
-                          <PlayCircle size={40} className="text-background ml-1" />
-                        </button>
-                      </div>
-                      <span className="text-secondary/30 font-mono text-sm">[ VIDEO: {project.title} ]</span>
+                    <div className="relative w-full h-full flex items-center justify-center">
+                      <button 
+                        onClick={() => setSelectedVideo(project.videoUrl)}
+                        className="w-20 h-20 rounded-full bg-accent/90 hover:bg-accent flex items-center justify-center transition-all hover:scale-110 group/btn shadow-2xl"
+                        aria-label="Play video"
+                      >
+                        <PlayCircle size={40} className="text-background ml-1" />
+                      </button>
+                      <span className="absolute bottom-4 left-4 text-secondary/30 font-mono text-xs">[ VIDEO PROJECT ]</span>
                     </div>
                   ) : (
                     <span className="text-secondary/30 font-mono text-sm">[ PROJECT IMAGE: {project.title} ]</span>
