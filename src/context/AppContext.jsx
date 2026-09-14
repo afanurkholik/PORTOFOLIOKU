@@ -41,7 +41,8 @@ const allData = {
           category: 'Photo · Video · Design · Social Media',
           description: 'Produced visual content for a school environment, including posters, banners, announcements, social media content, photography, and video. Supported an environment where annual applicants consistently exceeded the ~200 student enrollment target.',
           metadata: ['4 YEARS', 'PHOTO · VIDEO · DESIGN', 'SOCIAL MEDIA'],
-          slug: 'school-content'
+          slug: 'school-content',
+          image: '/assets/images/projects/school-content.jpg'
         },
         {
           id: 'p3',
